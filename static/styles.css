@@ -23,7 +23,7 @@
     line-height: 2rem;
     text-align: center;
     pointer-events: none;
-    color:  rgb(121, 214,231);
+    color:  #336b87;
 }
 
 #search-engine {
@@ -38,7 +38,7 @@
     text-decoration: none;
     font-size: 23px;
     margin-left: 100px;
-    color: green;
+    color: #2a3132;
     font-weight: bold;
 }
 
@@ -46,7 +46,7 @@
     float: right;   
     text-decoration: none;
     font-size: 23px;
-    color: green;
+    color: #2a3132;
     font-weight: bold;
 }
 
@@ -64,14 +64,13 @@
 header {
     padding-top: 20px;
     height: 80px;
-    background-color:  rgb(121, 214,231);
+    background-color:  #336b87;
+    border-bottom-width: 5px;
+    border-bottom-color: #763626;
+    border-bottom-style: solid;
 }
 
-<<<<<<< HEAD
-#footer {
-=======
 #footer{
->>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
     color: #2a3132;
     background-color: #336b87;
     height:50px;
@@ -79,79 +78,44 @@ header {
     border-top-width: 5px;
     border-top-color: #763626;
     border-top-style: solid;
-<<<<<<< HEAD
-=======
 }
 
 #Stats{
     display:inline;
->>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
 }
 
-#Stats {
-    display:inline;
-}
-
-#coins {
+#coins{
     list-style-type: none;
     padding-left: 10%;
 }
 
-#coins li {
+#coins li{
     display:inline;
 }
 
-<<<<<<< HEAD
-#ownedCoins {
-=======
 #ownedCoins{
     
->>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
     height: 25px;
     width: 25px;
 }
 
-#kilometers {
+#kilometers{
     padding-left: 30%;
 }
 
-<<<<<<< HEAD
-#todoStats {
-    display:inline;
-}
-
-#coinstoEarn {
-=======
 #todoStats{
     display:inline;
 }
 
 #coinstoEarn{
->>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
     list-style-type: none;
     padding-left: 70%;
 }
 
-#coinstoEarn li {
+#coinstoEarn li{
     display:inline;
 }
 
-<<<<<<< HEAD
-#kilometersLeft {
-    padding-left: 85%;
-}
-
-#avatarImg {
-    display:block;
-    margin:auto;
-    padding:auto;
-    height:170px;
-    width:170px;
-    border-radius: 50%;
-    border-style:solid;
-    border-width: 5px;
-    border-color: #763626;
-=======
 #kilometersLeft{
     padding-left: 85%;
 }
@@ -166,7 +130,6 @@ border-radius: 50%;
 border-style:solid;
 border-width: 5px;
 border-color: #763626;
->>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
 }
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
@@ -174,36 +137,6 @@ border-color: #763626;
 /*Medias*/
 @media (max-width: 575.98px) {
     #kilometers{
-<<<<<<< HEAD
-        visibility: hidden;
-    }
-
-    #search-engine {
-        visibility: hidden;
-        margin-left: -450px;
-    }
-
-    #search-engine-mobile {
-        width: 85%;
-        margin-left: 25px;
-    }
-    #brand {
-        margin-right: 0px;
-    }
-
-    #kilometersLeft {
-        visibility: hidden;
-    }
-
-    #coinstoEarn{
-        padding-left: 65%;
-    }
-
-    #avatarImg{
-        width:100px;
-        height:100px;
-    }
-=======
    visibility: hidden;
 }
 
@@ -230,25 +163,25 @@ border-color: #763626;
     margin-right: 0px;
 
 }
->>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
    #kilometers{
        visibility: hidden;
    }
-<<<<<<< HEAD
-
-    #search-engine-mobile {
-        visibility: hidden;
-    }
-=======
 
    #kilometersLeft{
     visibility: hidden;
    }
+
+   #avatarImg{
+    width:100px;
+    height:100px;
+    }
+
    #search-engine {
-    visibility: hidden;
+    margin-right: 90px;
+    width: 200px;
 }
 #search-engine-mobile {
     width: 85%;
@@ -263,11 +196,11 @@ border-color: #763626;
     margin-right: 20px;
 }
 #brand {
-    margin-right: 10px;
+    margin-right: 30px;
     margin-left: 5px;
 }
 #hikes {
-    margin-left: 95px;
+    margin-left: 55px;
 }
 
 #coinstoEarn{
@@ -275,78 +208,41 @@ border-color: #763626;
 }
 }
 
->>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
 
-    #search-engine-input {
-        width: 130%;
-        margin-right: 20px;
-    }
-
-    #brand {
-        margin-right: 10px;
-        margin-left: 5px;
-    }
-
-    #hikes {
-        margin-left: 95px;
-    }
-
-    #kilometersLeft {
-        visibility: hidden;
-    }
-
-    #search-engine {
-        visibility: hidden;
-    }
-
-    #search-engine-mobile {
-        width: 85%;
-        margin-left: 25px;
-    }
-
-    #coinstoEarn {
-        padding-left: 85%;
-    }
-}
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-    #footer {
-    height:70px;
-    font-size:25px;
-    }
-
-    #ownedCoins {
-    height: 35px;
-    width: 35px;
-    }
-
-    #search-engine {
-        width: 50%;
-    }
-
-    #search-engine-mobile {
-        visibility: hidden;
-    }
-
-    #search-engine-input {
-        width: 420px;
-        margin-left: 0px;
-        margin-right: 12px;
-    }
-
-    #search-engine {
-        margin-left: 0px; 
-        margin-right: 20px;
-    }
-
-    #brand {
-        margin-right: -90px;
-    }
-
-    #hikes {
-        margin-left: 70px;
-    }
+#footer{
+   height:70px;
+   font-size:25px;
 }
+
+#ownedCoins{
+   height: 35px;
+   width: 35px;
+}
+#search-engine {
+    width: 50%;
+}
+#search-engine-mobile {
+    visibility: hidden;
+}
+#search-engine-input {
+    width: 420px;
+    margin-left: 0px;
+    margin-right: 12px;
+}
+#search-engine {
+    margin-left: 0px; 
+    margin-right: 20px;
+}
+#brand {
+   margin-right: -90px;
+}
+#hikes {
+    margin-left: 70px;
+}
+}
+
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
    #footer{
@@ -358,8 +254,6 @@ border-color: #763626;
        height: 35px;
        width: 35px;
    }
-<<<<<<< HEAD
-=======
 
 #search-engine-mobile {
     visibility: hidden;
@@ -378,27 +272,7 @@ border-color: #763626;
 }
 
 }
->>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
 
-    #search-engine-mobile {
-        visibility: hidden;
-    }
-
-    #search-engine-input {
-        width: 720px;
-        margin-left: 0px;
-        margin-right: 1px;
-    }
-
-    #search-engine {
-        margin-left: -120px; 
-        margin-right: 390px;
-    }
-
-    #brand {
-        margin-right: -290px;
-    }
-}
 
 @media (min-width: 1200px) {
    #footer{
@@ -410,62 +284,61 @@ border-color: #763626;
        height: 35px;
        width: 35px;
    }
-<<<<<<< HEAD
-=======
 
 #search-engine-mobile {
     visibility: hidden;
 }
+#search-engine {
+    width: 850px;
 }
->>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
+#search-engine-input {
+    width: 850px;
+    margin-left: 15x;
+}
+#brand {
+    margin-right: 10px;
+}
+}
 
-    #search-engine-mobile {
-        visibility: hidden;
-    }
-}
 
 /*---Firefox Bug Fix --*/
 .carousel-item {
-    transition: -webkit-transform 0.5s ease;
-    transition: transform 0.5s ease;
-    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-    -webkit-backface-visibility: visible;
-    backface-visibility: visible;
+transition: -webkit-transform 0.5s ease;
+transition: transform 0.5s ease;
+transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+-webkit-backface-visibility: visible;
+backface-visibility: visible;
 }
-
 /*--- Fixed Background Image --*/
 figure {
-    position: relative;
-    width: 100%;
-    height: 60%;
-    margin: 0!important;
+position: relative;
+width: 100%;
+height: 60%;
+margin: 0!important;
 }
-
 .fixed-wrap {
-    clip: rect(0, auto, auto, 0);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+clip: rect(0, auto, auto, 0);
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
-
 #fixed {
-    background-image: url('img/mac.png');
-    position: fixed;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center center;
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-    will-change: transform;
+background-image: url('img/mac.png');
+position: fixed;
+display: block;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-size: cover;
+background-position: center center;
+-webkit-transform: translateZ(0);
+        transform: translateZ(0);
+will-change: transform;
 }
-
 /*--- Bootstrap Padding Fix --*/
 [class*="col-"] {
-    padding: 1rem;
+  padding: 1rem;
 }
