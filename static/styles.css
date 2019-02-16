@@ -67,7 +67,11 @@ header {
     background-color:  rgb(121, 214,231);
 }
 
+<<<<<<< HEAD
 #footer {
+=======
+#footer{
+>>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
     color: #2a3132;
     background-color: #336b87;
     height:50px;
@@ -75,6 +79,13 @@ header {
     border-top-width: 5px;
     border-top-color: #763626;
     border-top-style: solid;
+<<<<<<< HEAD
+=======
+}
+
+#Stats{
+    display:inline;
+>>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
 }
 
 #Stats {
@@ -90,7 +101,12 @@ header {
     display:inline;
 }
 
+<<<<<<< HEAD
 #ownedCoins {
+=======
+#ownedCoins{
+    
+>>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
     height: 25px;
     width: 25px;
 }
@@ -99,11 +115,19 @@ header {
     padding-left: 30%;
 }
 
+<<<<<<< HEAD
 #todoStats {
     display:inline;
 }
 
 #coinstoEarn {
+=======
+#todoStats{
+    display:inline;
+}
+
+#coinstoEarn{
+>>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
     list-style-type: none;
     padding-left: 70%;
 }
@@ -112,6 +136,7 @@ header {
     display:inline;
 }
 
+<<<<<<< HEAD
 #kilometersLeft {
     padding-left: 85%;
 }
@@ -126,6 +151,22 @@ header {
     border-style:solid;
     border-width: 5px;
     border-color: #763626;
+=======
+#kilometersLeft{
+    padding-left: 85%;
+}
+
+#avatarImg{
+display:block;
+margin:auto;
+padding:auto;
+height:170px;
+width:170px;
+border-radius: 50%;
+border-style:solid;
+border-width: 5px;
+border-color: #763626;
+>>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
 }
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
@@ -133,6 +174,7 @@ header {
 /*Medias*/
 @media (max-width: 575.98px) {
     #kilometers{
+<<<<<<< HEAD
         visibility: hidden;
     }
 
@@ -161,16 +203,79 @@ header {
         width:100px;
         height:100px;
     }
+=======
+   visibility: hidden;
+}
+
+#kilometersLeft{
+    visibility: hidden;
+}
+#coinstoEarn{
+    padding-left: 65%;
+}
+
+#avatarImg{
+    width:100px;
+    height:100px;
+}
+#search-engine {
+    visibility: hidden;
+    margin-left: -450px;
+}
+#search-engine-mobile {
+    width: 85%;
+    margin-left: 25px;
+}
+#brand {
+    margin-right: 0px;
+
+}
+>>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
    #kilometers{
        visibility: hidden;
    }
+<<<<<<< HEAD
 
     #search-engine-mobile {
         visibility: hidden;
     }
+=======
+
+   #kilometersLeft{
+    visibility: hidden;
+   }
+   #search-engine {
+    visibility: hidden;
+}
+#search-engine-mobile {
+    width: 85%;
+    margin-left: 25px;
+}
+   
+#search-engine-mobile {
+    visibility: hidden;
+}
+#search-engine-input {
+    width: 130%;
+    margin-right: 20px;
+}
+#brand {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+#hikes {
+    margin-left: 95px;
+}
+
+#coinstoEarn{
+    padding-left: 85%;
+}
+}
+
+>>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
 
     #search-engine-input {
         width: 130%;
@@ -253,6 +358,27 @@ header {
        height: 35px;
        width: 35px;
    }
+<<<<<<< HEAD
+=======
+
+#search-engine-mobile {
+    visibility: hidden;
+}
+#search-engine-input {
+    width: 720px;
+    margin-left: 0px;
+    margin-right: 1px;
+}
+#search-engine {
+    margin-left: -120px; 
+    margin-right: 390px;
+}
+#brand {
+   margin-right: -290px;
+}
+
+}
+>>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
 
     #search-engine-mobile {
         visibility: hidden;
@@ -284,6 +410,14 @@ header {
        height: 35px;
        width: 35px;
    }
+<<<<<<< HEAD
+=======
+
+#search-engine-mobile {
+    visibility: hidden;
+}
+}
+>>>>>>> ab068f599db7189808e436239dc9a2148c66c35a
 
     #search-engine-mobile {
         visibility: hidden;
