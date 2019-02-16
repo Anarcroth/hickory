@@ -29,6 +29,7 @@
 #search-engine {
     display: inline;
     float: right;
+    width: 540px;
 }
 
 #hikes {
@@ -42,7 +43,7 @@
 }
 
 #settings {
-    float: right;
+    float: right;   
     text-decoration: none;
     font-size: 23px;
     color: green;
@@ -113,13 +114,35 @@ header {
     #kilometers{
    visibility: hidden;
 }
-
+#search-engine {
+    visibility: hidden;
+}
+#search-engine-mobile {
+    width: 85%;
+    margin-left: 25px;
+}
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
    #kilometers{
        visibility: hidden;
    }
+   
+#search-engine-mobile {
+    visibility: hidden;
+}
+#search-engine-input {
+    width: 130%;
+    margin-right: 20px;
+}
+#brand {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+#hikes {
+    margin-left: 95px;
+}
+
 }
 
 
@@ -133,7 +156,28 @@ header {
    height: 35px;
    width: 35px;
 }
- }
+#search-engine {
+    width: 50%;
+}
+#search-engine-mobile {
+    visibility: hidden;
+}
+#search-engine-input {
+    width: 420px;
+    margin-left: 0px;
+    margin-right: 12px;
+}
+#search-engine {
+    margin-left: 0px; 
+    margin-right: 20px;
+}
+#brand {
+   margin-right: -90px;
+}
+#hikes {
+    margin-left: 70px;
+}
+}
 
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -146,6 +190,24 @@ header {
        height: 35px;
        width: 35px;
    }
+#search-engine-mobile {
+    visibility: hidden;
+}
+#search-engine-input {
+    width: 720px;
+    margin-left: 0px;
+    margin-right: 1px;
+}
+#search-engine {
+    margin-left: -120px; 
+    margin-right: 390px;
+}
+#brand {
+   margin-right: -290px;
+}
+#hikes {
+    
+}
 }
 
 
@@ -159,6 +221,10 @@ header {
        height: 35px;
        width: 35px;
    }
+   
+#search-engine-mobile {
+    visibility: hidden;
+}
 }
 
 
