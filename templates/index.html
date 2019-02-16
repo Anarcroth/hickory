@@ -10,11 +10,11 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <script src = "main.js"></script>
-    <link href="static/styles.css" rel="stylesheet">
+    <link href="../static/styles.css" rel="stylesheet">
 </head>
 <body>
 <!--Header-->
-<header class = "navbar-expand-md navbar-light sticky-top">
+<header class = "navbar-expand-md navbar-light sticky-top container-fluid">
     <div class = "container-fluid">
         <table>
             <tr>
@@ -28,26 +28,30 @@
                     </div>
                 </td>
             </tr>
-        </table>        
+        </table>  
+        <div class="form-group has-search" id = "search-engine-mobile">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input type="text" class="form-control" id = "search-engine-input-mobile" placeholder="Search">
+        </div>      
     </div>
 </header>
 <!--Footer-->
 <footer class="container-fluid fixed-bottom" id="footer">
-    <div class="fixed-bottom">
+    <div class="fixed-bottom" id="Stats">
         <ul id="coins" class="fixed-bottom">
-            <li><img src="coins.png" id="ownedCoins"></li>
+            <li><img src="../static/Images/coins.png" id="ownedCoins"></li>
             <li id="coinAmmount">0</li>
         </ul>
         <p id="kilometers">0km</p>
     </div>
 
-    <div class="fixed-bottom">
-
+    <div class="fixed-bottom" id="avatar">
+        <img src="../static/Images/avatar.jpg" id="avatarImg">
     </div>
 
-    <div class="fixed-bottom">
-        <ul id="coinstoEarn">
-            <li>+<img src="coins.png" id="ownedCoins"></li>
+    <div class="fixed-bottom" id="todoStats">
+        <ul id="coinstoEarn" class="fixed-bottom">
+            <li>+<img src="../static/Images/coins.png" id="ownedCoins"></li>
             <li>0</li>
         </ul>
         <p id="kilometersLeft">0km left</p>
