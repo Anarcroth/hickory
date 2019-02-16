@@ -67,44 +67,65 @@ header {
     background-color:  rgb(121, 214,231);
 }
 
-#footer{
-    color: rgb(0, 0, 0);
-    background-color: rgb(54, 135, 149);
+#footer {
+    color: #2a3132;
+    background-color: #336b87;
     height:50px;
     font-size: 20px;
+    border-top-width: 5px;
+    border-top-color: #763626;
+    border-top-style: solid;
 }
 
-#coins{
-    list-style-type: none;
-    padding-left: 10%;
-
-}
-
-#coins li{
+#Stats {
     display:inline;
 }
 
-#ownedCoins{
+#coins {
+    list-style-type: none;
+    padding-left: 10%;
+}
+
+#coins li {
+    display:inline;
+}
+
+#ownedCoins {
     height: 25px;
     width: 25px;
 }
 
-#kilometers{
+#kilometers {
     padding-left: 30%;
 }
 
-#coinstoEarn{
-    list-style-type: none;
+#todoStats {
     display:inline;
+}
+
+#coinstoEarn {
+    list-style-type: none;
     padding-left: 70%;
 }
 
-#coinstoEarn li{
+#coinstoEarn li {
     display:inline;
 }
 
-#kilometersLeft{
-    padding-left: 90%;
+#kilometersLeft {
+    padding-left: 85%;
+}
+
+#avatarImg {
+    display:block;
+    margin:auto;
+    padding:auto;
+    height:170px;
+    width:170px;
+    border-radius: 50%;
+    border-style:solid;
+    border-width: 5px;
+    border-color: #763626;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
@@ -112,77 +133,115 @@ header {
 /*Medias*/
 @media (max-width: 575.98px) {
     #kilometers{
-   visibility: hidden;
-}
-#search-engine {
-    visibility: hidden;
-    margin-left: -450px;
-}
-#search-engine-mobile {
-    width: 85%;
-    margin-left: 25px;
-}
-#brand {
-    margin-right: 0px;
-}
+        visibility: hidden;
+    }
+
+    #search-engine {
+        visibility: hidden;
+        margin-left: -450px;
+    }
+
+    #search-engine-mobile {
+        width: 85%;
+        margin-left: 25px;
+    }
+    #brand {
+        margin-right: 0px;
+    }
+
+    #kilometersLeft {
+        visibility: hidden;
+    }
+
+    #coinstoEarn{
+        padding-left: 65%;
+    }
+
+    #avatarImg{
+        width:100px;
+        height:100px;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
    #kilometers{
        visibility: hidden;
    }
-   
-#search-engine-mobile {
-    visibility: hidden;
-}
-#search-engine-input {
-    width: 130%;
-    margin-right: 20px;
-}
-#brand {
-    margin-right: 10px;
-    margin-left: 5px;
-}
-#hikes {
-    margin-left: 95px;
-}
 
-}
+    #search-engine-mobile {
+        visibility: hidden;
+    }
 
+    #search-engine-input {
+        width: 130%;
+        margin-right: 20px;
+    }
+
+    #brand {
+        margin-right: 10px;
+        margin-left: 5px;
+    }
+
+    #hikes {
+        margin-left: 95px;
+    }
+
+    #kilometersLeft {
+        visibility: hidden;
+    }
+
+    #search-engine {
+        visibility: hidden;
+    }
+
+    #search-engine-mobile {
+        width: 85%;
+        margin-left: 25px;
+    }
+
+    #coinstoEarn {
+        padding-left: 85%;
+    }
+}
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-#footer{
-   height:70px;
-   font-size:25px;
-}
+    #footer {
+    height:70px;
+    font-size:25px;
+    }
 
-#ownedCoins{
-   height: 35px;
-   width: 35px;
-}
-#search-engine {
-    width: 50%;
-}
-#search-engine-mobile {
-    visibility: hidden;
-}
-#search-engine-input {
-    width: 420px;
-    margin-left: 0px;
-    margin-right: 12px;
-}
-#search-engine {
-    margin-left: 0px; 
-    margin-right: 20px;
-}
-#brand {
-   margin-right: -90px;
-}
-#hikes {
-    margin-left: 70px;
-}
-}
+    #ownedCoins {
+    height: 35px;
+    width: 35px;
+    }
 
+    #search-engine {
+        width: 50%;
+    }
+
+    #search-engine-mobile {
+        visibility: hidden;
+    }
+
+    #search-engine-input {
+        width: 420px;
+        margin-left: 0px;
+        margin-right: 12px;
+    }
+
+    #search-engine {
+        margin-left: 0px; 
+        margin-right: 20px;
+    }
+
+    #brand {
+        margin-right: -90px;
+    }
+
+    #hikes {
+        margin-left: 70px;
+    }
+}
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
    #footer{
@@ -194,26 +253,26 @@ header {
        height: 35px;
        width: 35px;
    }
-#search-engine-mobile {
-    visibility: hidden;
-}
-#search-engine-input {
-    width: 720px;
-    margin-left: 0px;
-    margin-right: 1px;
-}
-#search-engine {
-    margin-left: -120px; 
-    margin-right: 390px;
-}
-#brand {
-   margin-right: -290px;
-}
-#hikes {
-    
-}
-}
 
+    #search-engine-mobile {
+        visibility: hidden;
+    }
+
+    #search-engine-input {
+        width: 720px;
+        margin-left: 0px;
+        margin-right: 1px;
+    }
+
+    #search-engine {
+        margin-left: -120px; 
+        margin-right: 390px;
+    }
+
+    #brand {
+        margin-right: -290px;
+    }
+}
 
 @media (min-width: 1200px) {
    #footer{
@@ -225,55 +284,54 @@ header {
        height: 35px;
        width: 35px;
    }
-   
-#search-engine-mobile {
-    visibility: hidden;
-}
-}
 
+    #search-engine-mobile {
+        visibility: hidden;
+    }
+}
 
 /*---Firefox Bug Fix --*/
 .carousel-item {
-transition: -webkit-transform 0.5s ease;
-transition: transform 0.5s ease;
-transition: transform 0.5s ease, -webkit-transform 0.5s ease;
--webkit-backface-visibility: visible;
-backface-visibility: visible;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
 }
+
 /*--- Fixed Background Image --*/
 figure {
-position: relative;
-width: 100%;
-height: 60%;
-margin: 0!important;
+    position: relative;
+    width: 100%;
+    height: 60%;
+    margin: 0!important;
 }
+
 .fixed-wrap {
-clip: rect(0, auto, auto, 0);
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
+
 #fixed {
-background-image: url('img/mac.png');
-position: fixed;
-display: block;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-size: cover;
-background-position: center center;
--webkit-transform: translateZ(0);
-        transform: translateZ(0);
-will-change: transform;
+    background-image: url('img/mac.png');
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    will-change: transform;
 }
+
 /*--- Bootstrap Padding Fix --*/
 [class*="col-"] {
-  padding: 1rem;
+    padding: 1rem;
 }
-
-
-
-
