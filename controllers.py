@@ -7,16 +7,16 @@ import math
 
 from constants import COEFFICIENTS, MAX_COEFFICIENTS
 
-CONNECTION
+CONNECTION = None
 
 def get_connection():
     POSTGRES_URL = get_env_variable("POSTGRES_URL")
-	POSTGRES_USER = get_env_variable("POSTGRES_USER")
-	POSTGRES_PW = get_env_variable("POSTGRES_PW")
-	POSTGRES_DB = get_env_variable("POSTGRES_DB")
+    POSTGRES_USER = get_env_variable("POSTGRES_USER")
+    POSTGRES_PW = get_env_variable("POSTGRES_PW")
+    POSTGRES_DB = get_env_variable("POSTGRES_DB")
 
-	DB_URL = 'postgresql+psycopg2://{user}:{pw}@{url}/{db}'.format(user=POSTGRES_USER,pw=POSTGRES_PW,url=POSTGRES_URL,db=POSTGRES_DB)
-	CONNECTION = engine.connect()
+    DB_URL = 'postgresql+psycopg2://{user}:{pw}@{url}/{db}'.format(user=POSTGRES_USER,pw=POSTGRES_PW,url=POSTGRES_URL,db=POSTGRES_DB)
+    CONNECTION = engine.connect()
 
 
 def get_recommendation(user_id : int):
@@ -27,7 +27,7 @@ def get_recommendation(user_id : int):
 
 class Recommendation(object):
     """Provides recommendation system."""
-    
+
     @staticmethod
     def normalize(vector : list) -> list:
         """Normalize a vector of values."""
@@ -72,11 +72,12 @@ class Recommendation(object):
 
 # connection to the database
 class User(object):
-    def get(self, id : int):
-		sql = "Select user from users where user_id = %s;"
-		data = (id)
-		result = CONNECTION.execute(sql, data)
-		return result
+    @staticmethod
+    def get(id : int):
+        sql = "Select user from users where user_id = %s;"
+        data = (id)
+        result = CONNECTION.execute(sql, data)
+        print(result)
 
 
 class Route(object):
@@ -89,10 +90,10 @@ class Route(object):
             self.profile_vector = profile_vector
 
     def get(self, id : int):
-		sql = "Select * from settings;"
-		data = (id)
-		result = CONNECTION.execute(sql, data)
-		return result
+        sql = "Select * from settings;"
+        data = (id)
+        result = CONNECTION.execute(sql, data)
+        print(result)
 
     @staticmethod
     def get_all():
