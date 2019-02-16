@@ -67,16 +67,22 @@ header {
 }
 
 #footer{
-    color: rgb(0, 0, 0);
-    background-color: rgb(54, 135, 149);
+    color: #2a3132;
+    background-color: #336b87;
     height:50px;
     font-size: 20px;
+    border-top-width: 5px;
+    border-top-color: #763626;
+    border-top-style: solid;
+}
+
+#Stats{
+    display:inline;
 }
 
 #coins{
     list-style-type: none;
     padding-left: 10%;
-
 }
 
 #coins li{
@@ -84,6 +90,7 @@ header {
 }
 
 #ownedCoins{
+    
     height: 25px;
     width: 25px;
 }
@@ -92,9 +99,12 @@ header {
     padding-left: 30%;
 }
 
+#todoStats{
+    display:inline;
+}
+
 #coinstoEarn{
     list-style-type: none;
-    display:inline;
     padding-left: 70%;
 }
 
@@ -103,7 +113,19 @@ header {
 }
 
 #kilometersLeft{
-    padding-left: 90%;
+    padding-left: 85%;
+}
+
+#avatarImg{
+display:block;
+margin:auto;
+padding:auto;
+height:170px;
+width:170px;
+border-radius: 50%;
+border-style:solid;
+border-width: 5px;
+border-color: #763626;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
@@ -113,13 +135,30 @@ header {
     #kilometers{
    visibility: hidden;
 }
+#kilometersLeft{
+    visibility: hidden;
+}
+#coinstoEarn{
+    padding-left: 65%;
+}
 
+#avatarImg{
+    width:100px;
+    height:100px;
+}
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
    #kilometers{
        visibility: hidden;
    }
+   #kilometersLeft{
+    visibility: hidden;
+}
+
+#coinstoEarn{
+    padding-left: 85%;
+}
 }
 
 
