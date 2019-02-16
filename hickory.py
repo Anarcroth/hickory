@@ -24,11 +24,16 @@ def recommendations():
 
 @app.route("/route/<int:id>")
 def get_route(id: int):
-    #route = controllers.Route.get(id)
+    route = controllers.Route.get(id)
     #return render_template('route.html', {'route': route})
-    pass
+
+
+@app.route("/user/<int:id>")
+def user(id: int):
+    user = controllers.User.get(id)
+    #return render_template('user.html', {'user': user})
 
 
 if __name__ == '__main__':
     app.run(debug=True)
-    controllers.get_connection()
+    #controllers.get_connection()
