@@ -1,35 +1,34 @@
 #!/bin/env python
 
-import psycopg2
-import re
-import os
-import recommendation
-
 from flask import Flask
 from flask import render_template
+from flask import request
 
+import json
+
+import controllers
 
 app = Flask(__name__)
 
 
 @app.route("/")
-def hello():
+def index():
     return render_template('index.html')
+
+
+@app.route("/recommendations", methods=["POST"])
+def recommendations():
+    recs = controllers.get_recommendations()
+    return json.dumps(recs)
+
+
+@app.route("/route/<int:id>")
+def get_route(id: int):
+    #route = controllers.Route.get(id)
+    #return render_template('route.html', {'route': route})
+    pass
 
 
 if __name__ == '__main__':
     app.run(debug=True)
-    get_connection()
-
-
-def get_connection():
-    conn = psycopg2.connect(databasename=POSTGRES_DB,
-                           user=POSTGRES_USER,
-                           password=POSTGRES_PW,
-                           host=POSTGRES_URL,
-                           port=POSTGRES_PORT)
-    return conn
-
-
-def get_recommendation():
-    pass
+    controllers.get_connection()
