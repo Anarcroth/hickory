@@ -18,7 +18,8 @@ def index():
 
 @app.route("/recommendations", methods=["POST"])
 def recommendations():
-    recs = controllers.get_recommendations()
+    user_id = request['user_id']
+    recs = controllers.get_recommendations(user_id)
     return json.dumps(recs)
 
 

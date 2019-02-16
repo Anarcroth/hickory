@@ -14,7 +14,7 @@ def get_connection():
     return conn
 
 
-def get_recommendation():
+def get_recommendation(user_id : int):
     pass
 
 
