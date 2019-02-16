@@ -3,6 +3,7 @@
 import psycopg2
 import re
 import os
+import recommendation
 
 from flask import Flask
 from flask import render_template
@@ -28,3 +29,7 @@ def get_connection():
                            host=POSTGRES_URL,
                            port=POSTGRES_PORT)
     return conn
+
+
+def get_recommendation():
+    pass
