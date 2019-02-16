@@ -16,3 +16,15 @@ def get_connection():
 
 def get_recommendation():
     pass
+
+
+class User(object):
+    def get(self, id : int):
+        pass
+
+
+class Recommendation(object):
+    def get(self, id : int):
+        pass
+
+
