@@ -5,7 +5,7 @@
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <style>
-      /*<span class="metadata-marker" style="display: none;" data-region_tag="css"></span>  Always set the map height explicitly to define the size of the div
+      /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
         height: 100%;
@@ -20,19 +20,10 @@
   </head>
   <body>
     <span class="metadata-marker" style="display: none;" data-region_tag="html-body"></span>
-    <div id="map"></div>
+    <div id="map" onStart></div>
     <span class="metadata-marker" style="display: none;" data-region_tag="script-body"></span>
-    <script>
-    var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 42.01667, lng: 23.1},
-          zoom: 12
-        });
-      }
-    </script>
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDZSSn0o60aj1fzwtOAkY1Jjpr2YlXSOTY&callback=initMap"
-	    async defer></script>
-    <script href=></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDZSSn0o60aj1fzwtOAkY1Jjpr2YlXSOTY&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=AIzaSyDZSSn0o60aj1fzwtOAkY1Jjpr2YlXSOTY" async defer></script>
+    <script type="text/javascript" src="map.js"></script>
   </body>
 </html>
