@@ -29,6 +29,7 @@
 #search-engine {
     display: inline;
     float: right;
+    width: 540px;
 }
 
 #hikes {
@@ -42,7 +43,7 @@
 }
 
 #settings {
-    float: right;
+    float: right;   
     text-decoration: none;
     font-size: 23px;
     color: green;
@@ -135,6 +136,7 @@ border-color: #763626;
     #kilometers{
    visibility: hidden;
 }
+
 #kilometersLeft{
     visibility: hidden;
 }
@@ -146,12 +148,25 @@ border-color: #763626;
     width:100px;
     height:100px;
 }
+#search-engine {
+    visibility: hidden;
+    margin-left: -450px;
+}
+#search-engine-mobile {
+    width: 85%;
+    margin-left: 25px;
+}
+#brand {
+    margin-right: 0px;
+
+}
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
    #kilometers{
        visibility: hidden;
    }
+
    #kilometersLeft{
     visibility: hidden;
    }
@@ -162,10 +177,25 @@ border-color: #763626;
     width: 85%;
     margin-left: 25px;
 }
+   
+#search-engine-mobile {
+    visibility: hidden;
+}
+#search-engine-input {
+    width: 130%;
+    margin-right: 20px;
+}
+#brand {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+#hikes {
+    margin-left: 95px;
 }
 
 #coinstoEarn{
     padding-left: 85%;
+}
 }
 
 
@@ -201,7 +231,7 @@ border-color: #763626;
 #hikes {
     margin-left: 70px;
 }
- }
+}
 
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -214,7 +244,8 @@ border-color: #763626;
        height: 35px;
        width: 35px;
    }
-   #search-engine-mobile {
+
+#search-engine-mobile {
     visibility: hidden;
 }
 #search-engine-input {
@@ -229,6 +260,7 @@ border-color: #763626;
 #brand {
    margin-right: -290px;
 }
+
 }
 
 
@@ -242,7 +274,7 @@ border-color: #763626;
        height: 35px;
        width: 35px;
    }
-      
+
 #search-engine-mobile {
     visibility: hidden;
 }
@@ -290,3 +322,7 @@ will-change: transform;
 [class*="col-"] {
   padding: 1rem;
 }
+
+
+
+
