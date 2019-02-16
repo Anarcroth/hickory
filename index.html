@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hickory</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src = "main.js"></script>
+    <link href="static/styles.css" rel="stylesheet">
+</head>
+<body>
+<!--Header-->
+<header class = "navbar-expand-md navbar-light sticky-top">
+    <div class = "container-fluid">
+        <table>
+            <tr>
+                <td>
+                    <a class = "navbar-brand" href = "index.html" id = "brand">Brand</a>
+                    <a href = "#" id = "settings">Settings</a>
+                    <a href = "#" id = "hikes">Hikes</a>
+                    <div class="form-group has-search" id = "search-engine">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" id = "search-engine-input" placeholder="Search">
+                    </div>
+                </td>
+            </tr>
+        </table>        
+    </div>
+</header>
+<!--Footer-->
+<footer class="container-fluid fixed-bottom" id="footer">
+    <div class="fixed-bottom">
+        <ul id="coins" class="fixed-bottom">
+            <li><img src="coins.png" id="ownedCoins"></li>
+            <li id="coinAmmount">0</li>
+        </ul>
+        <p id="kilometers">0km</p>
+    </div>
+
+    <div class="fixed-bottom">
+
+    </div>
+
+    <div class="fixed-bottom">
+        <ul id="coinstoEarn">
+            <li>+<img src="coins.png" id="ownedCoins"></li>
+            <li>0</li>
+        </ul>
+        <p id="kilometersLeft">0km left</p>
+    </div>
+    </footer>
+</body>
+
+</html>
