@@ -60,10 +60,12 @@ class Recommendation(object):
 
     @staticmethod
     def search_nearest_route(user : list = None, routes : list = None) -> list:
+        hard_code = [[1000, 100, 3, 2], [100000, 400, 9, 2], [100, 250, 8, 10], [155, 4, 54, 7], [300, 50, 40, 55]]
         if not user:
             user = [1000, 250, 10, 10]  # get_users()
-        if not routes:
-            routes = [Route(profile_vector=v) for v in [[1000, 100, 3, 2], [100000, 400, 9, 2], [100, 250, 8, 10]]]
+        for route, profile in zip(routes, hard_code):
+            if not route.profile_vector:
+            route.profile_vector = profile
         #get_list_routes()
 
         user = Recommendation.normalize(user)
@@ -84,7 +86,13 @@ class User(object):
         sql = "Select user from users where user_id = %s;"
         data = (id)
         result = CONNECTION.execute(sql, data)
-        print(result)
+        r = result.fetchone()
+        user_dict = {
+            "id": r[0],
+            "name": r[1],
+            "age": r[2]
+        }
+        return user_dict
 
 
 class Route(object):
@@ -103,12 +111,16 @@ class Route(object):
         sql = "Select * from settings;"
         data = (id)
         result = CONNECTION.execute(sql, data)
-        print(result)
+        r = result.fetchone()
+        route = Route(**r)
+        route_dict = Route.to_json(route)
+        return route_dict
 
     @staticmethod
     def get_all() -> list:
         sql_query = "Select * from route"
-        results = CONNECTION.fetch_all(sql_query)
+        results = CONNECTION.execute(sql_query)
+        r = results.fetchall()
         routes = [Route(**r for r in result)]
         return routes
 
