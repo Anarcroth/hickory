@@ -27,12 +27,14 @@ def recommendations():
 def get_route(id: int):
     route = controllers.Route.get(id)
     #return render_template('route.html', {'route': route})
+    return json.dumps(route)
 
 
 @app.route("/user/<int:id>")
 def user(id: int):
     user = controllers.User.get(id)
     #return render_template('user.html', {'user': user})
+    return json.dumps(user)
 
 
 if __name__ == '__main__':

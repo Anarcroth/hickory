@@ -1,4 +1,5 @@
 from sqlalchemy import create_engine
+#import recommendation
 import psycopg2
 import re
 import os
@@ -93,9 +94,9 @@ class Route(object):
             self.profile_vector = [1, 2, 3, 4]
         else:
             self.profile_vector = profile_vector
-
-    def get(self, id : int):
-        sql = "Select * from settings;"
+    @staticmethod
+    def get( id : int):
+        sql = "Select * from routes where route_id =%s;"
         data = (id)
         result = CONNECTION.execute(sql, data)
         print(result)
@@ -103,9 +104,6 @@ class Route(object):
     @staticmethod
     def get_all():
         return []
-
-    def __repr__(self):
-        return str({self.approximation: self.profile_vector})
 
 
 class UserSetting(object):
