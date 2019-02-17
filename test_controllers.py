@@ -7,5 +7,6 @@ print(User.get(1))
 print(Route.get(6))
 
 r = controllers.get_recommendation(1)
+print(r)
 for x in r:
 	print(controllers.Route.to_json(x))

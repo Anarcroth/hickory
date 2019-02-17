@@ -122,7 +122,7 @@ class Route(object):
         sql_query = "Select * from routes"
         results = CONNECTION.execute(sql_query)
         results = results.fetchall()
-        routes = [Route(r for r in results)]
+        routes = [Route(r[0],[1],r[2],r[3],[4],r[5]) for r in results]
         return routes
 
 
