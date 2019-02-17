@@ -26,6 +26,12 @@
   color:  #336b87;
 }
 
+.achievments {
+  border-top: black 1px solid;
+  border-left: black 1px solid;
+  border-bottom: black 1px solid;
+}
+
 #search-engine {
   display: inline;
   float: right;
