@@ -10,7 +10,7 @@ from constants import COEFFICIENTS, MAX_COEFFICIENTS
 CONNECTION
 
 def get_connection():
-  POSTGRES_URL = get_env_variable("POSTGRES_URL")
+    POSTGRES_URL = get_env_variable("POSTGRES_URL")
 	POSTGRES_USER = get_env_variable("POSTGRES_USER")
 	POSTGRES_PW = get_env_variable("POSTGRES_PW")
 	POSTGRES_DB = get_env_variable("POSTGRES_DB")
@@ -76,7 +76,7 @@ class User(object):
 		sql = "Select user from users where user_id = %s;"
 		data = (id)
 		result = CONNECTION.execute(sql, data)
-		print(result)
+		return result
 
 
 class Route(object):
@@ -92,7 +92,7 @@ class Route(object):
 		sql = "Select * from settings;"
 		data = (id)
 		result = CONNECTION.execute(sql, data)
-		print(result)
+		return result
 
     @staticmethod
     def get_all():
