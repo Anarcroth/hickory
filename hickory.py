@@ -17,9 +17,9 @@ def index():
 
 @app.route("/recommendations/<int:uid>")
 def recommendations(uid: int):
-    recs = controllers.get_recommendations(uid)
-    recs = [r.to_json() for r in recs]
-    return json.dumps(recs)
+    recs = controllers.get_recommendation(uid)
+    recs = [controllers.Route.to_json(r) for r in recs]
+    return json.dumps(list(recs))
 
 
 @app.route("/route/<int:id>")
@@ -40,7 +40,7 @@ def user_page():
     return render_template('user.html')
 	
 @app.route("/route_page")
-def route():
+def route_page():
     return render_template('route.html')
 
 if __name__ == '__main__':

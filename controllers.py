@@ -107,12 +107,13 @@ class Route(object):
         self.approximation = 0.0
         self.profile_vector = profile_vector
 
-    def get(self, id : int):
-        sql = "Select * from settings;"
+    @staticmethod
+    def get( id : int):
+        sql = "Select * from routes where route_id =%s;"
         data = (id)
         result = CONNECTION.execute(sql, data)
         r = result.fetchone()
-        route = Route(r)
+        route = Route(r[0],[1],r[2],r[3],[4],r[5])
         route_dict = Route.to_json(route)
         return route_dict
 
@@ -120,7 +121,7 @@ class Route(object):
     def get_all() -> list:
         sql_query = "Select * from routes"
         results = CONNECTION.execute(sql_query)
-        r = results.fetchall()
+        results = results.fetchall()
         routes = [Route(r for r in results)]
         return routes
 

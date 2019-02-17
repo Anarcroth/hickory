@@ -5,4 +5,7 @@ from controllers import User, Route, Recommendation
 
 print(User.get(1))
 print(Route.get(6))
-print(controllers.get_recommendation(1))
+
+r = controllers.get_recommendation(1)
+for x in r:
+	print(controllers.Route.to_json(x))
