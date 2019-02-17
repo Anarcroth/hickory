@@ -1,0 +1,87 @@
+﻿CREATE DATABASE hackaubg;
+
+CREATE TABLE Users(\
+    user_id SERIAL PRIMARY KEY,\
+    name text NOT NULL,\
+    age int NOT NULL,\
+    password text NOT NULL\
+);
+
+INSERT INTO Users \
+( name, age, password)\
+VALUES \
+('Martin', 22, '123456'), \
+('Milen', 25, '123456'),\
+('Giorgi', 15, '123456');
+
+CREATE TABLE Routes(\
+    route_id SERIAL PRIMARY KEY,\
+    name text NOT NULL,\
+    from_dest text NOT NULL,\
+    to_dest text NOT NULL,\
+    description text NOT NULL,\
+    difficulty text NOT NULL
+);
+
+INSERT INTO Routes (name, from_dest, to_dest, description, difficulty)\
+VALUES\
+('Musala', 'Borovec', 'Musala', 'Musala is the highest peak in Bulgaria and the entire Balkan peninsula. Nessesary equipments: Compass, \
+Sunglasses, sun cream and a sun hat, Spare warm clothing, Headlamp and/or handheld torch, First-aid kit, Firestarter, Matches.', '5'), \
+('Vihren', 'Bansko' , 'Vihren', 'Mount Vihren (2914 m.) is the highest point of Pirin Mountains. ts looks like a huge marble stone pyramid\
+ which north face is a 400 m. high vertical wall, accessible only for climbers. In case of climbing you will need: climbing harness, a belay \
+device and suitable climbing shoes, rope, helmet' , '8'),\
+('7 Rila Lakes', 'Sapareva Bania','7 Rila Lakes' ,' Seven Lakes area is a very attractive place also for the Bulgarian tourists – with its charm of a place away of the civilization, \
+high up in the mountains, with an extraordinary beauty of the crystal water lakes and spiritual sense.', 3),\
+('Botev', 'Rai', 'Botev', 'Standing at 2376 m above sea level, Botev is the tallest peak in Stara Planina. It lies within the boundaries of national park Central Balkan –\
+a beautiful natural reserve protecting 72 000 hectares of natural beauty.', 9),\
+('Macedonia Hut' , 'Hut Bodrost', 'Macedonia Hut', 'Macedonia Hut is a mountain hut in Southwestern Rila Mountains, Bulgaria. It was originally built in 1933. \
+The building is located on a mountain pass between The Big Bear and The Small Bear peaks. ', 1\
+);
+
+CREATE TABLE awards(\
+    award_id SERIAL PRIMARY KEY,\
+    name text NOT NULL,\
+    description text NOT NULL,\
+    route_id int NOT NULL,\
+    FOREIGN KEY (route_id) REFERENCES Users(user_id)\
+);
+
+CREATE TABLE landmarks(\
+    landmark_id SERIAL PRIMARY KEY,\
+    amount int NOT NULL,\
+    location text NOT NULL,\
+    FOREIGN KEY (amount) REFERENCES awards(award_id)\
+);
+
+CREATE TABLE settings(\
+    settings_id int NOT NULL,\
+    current_location text,\
+    steps int,\
+    taken_routes text,\
+    desired_complexity int,\
+    FOREIGN KEY (settings_id) REFERENCES users (user_id)\
+);
+
+INSERT INTO settings\
+( settings_id , current_location, steps, taken_routes, desired_complexity)\
+VALUES \
+(1, '43.2141 27.9147', 12, , '0', 4), \
+(2, '42.6977 23.3219', 1678, '0', 3),\
+(3, '42.0209 23.0943', 8765, '0', 6);
+
+CREATE TABLE taken_routes(\
+    user_id int NOT NULL,\
+    route_id int NOT NULL,\
+    PRIMARY KEY (user_id, route_id),\
+    FOREIGN KEY (user_id) REFERENCES users(user_id),\
+    FOREIGN KEY (route_id) REFERENCES routes(route_id)\
+);
+INSERT INTO taken_routes\
+( user_id , route_id)\
+VALUES \
+(3,  6), \
+(3,  7),\
+(3,  8), \
+(2,  9),\
+(2,  10);
+
