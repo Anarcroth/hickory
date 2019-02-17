@@ -9,7 +9,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <script src = "main.js"></script>
     <link href="../static/styles.css" rel="stylesheet">
 </head>
 <body>
@@ -28,13 +27,15 @@
                     </div>
                 </td>
             </tr>
-        </table>       
+        </table>
     </div>
 </header>
 <div class="form-group has-search" id = "search-engine-mobile">
     <span class="fa fa-search form-control-feedback"></span>
     <input type="text" class="form-control" id = "search-engine-input-mobile" placeholder="Search">
-</div>      
+</div>
+<!--map-->
+<div id="map"></div>
 <!--Footer-->
 <footer class="container-fluid fixed-bottom" id="footer">
     <div class="fixed-bottom" id="Stats">
@@ -56,7 +57,10 @@
         </ul>
         <p id="kilometersLeft">0km left</p>
     </div>
-    </footer>
+</footer>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDZSSn0o60aj1fzwtOAkY1Jjpr2YlXSOTY&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=AIzaSyDZSSn0o60aj1fzwtOAkY1Jjpr2YlXSOTY" async defer></script>
+<script type="text/javascript" src="../static/map.js"></script>
 </body>
 
 </html>

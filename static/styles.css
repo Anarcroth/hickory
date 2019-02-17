@@ -38,19 +38,20 @@
   text-decoration: none;
   font-size: 23px;
   margin-left: 100px;
-  color: #2a3132;
+  color: #f0ebdf;
   font-weight: bold;
 }
 
 #settings {
-  float: right;   
+  float: right;
   text-decoration: none;
   font-size: 23px;
-  color: #2a3132;
+  color: #f0ebdf;
   font-weight: bold;
 }
 
 #brand {
+    color: #f0ebdf;
   margin-right: 120px;
   margin-left: 20px;
   font-weight: bold;
@@ -58,7 +59,7 @@
 
 #search-engine-input {
   width: 600px;
-  margin-right: 120px; 
+  margin-right: 120px;
 }
 
 header {
@@ -71,7 +72,7 @@ header {
 }
 
 #footer{
-  color: #2a3132;
+  color: #f0ebdf;
   background-color: #336b87;
   height:50px;
   font-size: 20px;
@@ -94,7 +95,7 @@ header {
 }
 
 #ownedCoins{
-  
+
   height: 25px;
   width: 25px;
 }
@@ -130,6 +131,16 @@ border-radius: 50%;
 border-style:solid;
 border-width: 5px;
 border-color: #763626;
+}
+
+html, body {
+    height: 92%;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    height: 100%;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
@@ -189,9 +200,9 @@ border-color: #763626;
   width: 85%;
   margin-left: 25px;
 }
- 
+
 #search-engine-mobile {
-  visibility: hidden;
+    display: none;
 }
 #search-engine-input {
   width: 250px;
@@ -226,7 +237,7 @@ border-color: #763626;
   width: 50%;
 }
 #search-engine-mobile {
-  visibility: hidden;
+    display: none;
 }
 #search-engine-input {
   width: 420px;
@@ -234,7 +245,7 @@ border-color: #763626;
   margin-right: 12px;
 }
 #search-engine {
-  margin-left: 0px; 
+  margin-left: 0px;
   margin-right: 20px;
 }
 #brand {
@@ -258,7 +269,7 @@ border-color: #763626;
  }
 
 #search-engine-mobile {
-  visibility: hidden;
+    display: none;
 }
 #search-engine-input {
   width: 620px;
@@ -266,7 +277,7 @@ border-color: #763626;
   margin-right: 1px;
 }
 #search-engine {
-  margin-left: 0px; 
+  margin-left: 0px;
   margin-right: 0px;
 }
 #brand {
@@ -288,7 +299,7 @@ border-color: #763626;
  }
 
 #search-engine-mobile {
-  visibility: hidden;
+  display: none;
 }
 #search-engine {
   width: 250px;
