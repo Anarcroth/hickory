@@ -15,17 +15,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-
-@app.route("/user")
-def user():
-    return render_template('user.html')
-
-
-@app.route("/route")
-def route():
-    return render_template('route.html')
-
-
 @app.route("/recommendations/<int:uid>")
 def recommendations(uid: int):
     recs = controllers.get_recommendations(uid)
@@ -46,7 +35,15 @@ def user(id: int):
     #return render_template('user.html', {'user': user})
     return json.dumps(user)
 
+@app.route("/user_page")
+def user_page():
+    return render_template('user.html')
+	
+@app.route("/route_page")
+def route():
+    return render_template('route.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
     #controllers.get_connection()
+
