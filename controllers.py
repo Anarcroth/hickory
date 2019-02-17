@@ -5,9 +5,9 @@ import re
 import os
 import math
 
+from db_connection import get_env_variable
 from constants import COEFFICIENTS, MAX_COEFFICIENTS
 
-CONNECTION = None
 
 def get_connection():
     POSTGRES_URL = get_env_variable("POSTGRES_URL")
@@ -16,8 +16,13 @@ def get_connection():
     POSTGRES_DB = get_env_variable("POSTGRES_DB")
 
     DB_URL = 'postgresql+psycopg2://{user}:{pw}@{url}/{db}'.format(user=POSTGRES_USER,pw=POSTGRES_PW,url=POSTGRES_URL,db=POSTGRES_DB)
-    CONNECTION = engine.connect()
+    conn = engine.connect()
+    return conn
 
+CONNECTION = get_connection()
+
+
+# recommendation system
 
 def get_recommendation(user_id : int):
     user_settings = UserSetting.get_by_foreign_key(user_id=user_id)
