@@ -1,0 +1,414 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 50%;
+  margin: 50px auto;
+}
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  margin-top: 0.2rem;
+  margin-left: 0.2rem;
+  width: 2.0rem;
+  height: 2.0rem;
+  line-height: 2rem;
+  text-align: center;
+  pointer-events: none;
+  color:  #336b87;
+}
+
+#search-engine {
+  display: inline;
+  float: right;
+  width: 540px;
+}
+
+#hikes {
+  float: right;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 23px;
+  margin-left: 100px;
+  color: white;
+  font-weight: bold;
+}
+
+.achievments {
+  margin-bottom: 90px;
+}
+
+#brand {
+  color: white;
+}
+
+#settings {
+  float: right;   
+  text-decoration: none;
+  font-size: 23px;
+  color: white;
+  font-weight: bold;
+}
+
+#brand {
+  margin-right: 120px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+#search-engine-input {
+  width: 600px;
+  margin-right: 120px; 
+}
+
+header {
+  padding-top: 20px;
+  height: 80px;
+  background-color:  #336b87;
+  border-bottom-width: 5px;
+  border-bottom-color: #763626;
+  border-bottom-style: solid;
+}
+
+#footer{
+  color: #2a3132;
+  background-color: #336b87;
+  height:50px;
+  font-size: 20px;
+  border-top-width: 5px;
+  border-top-color: #763626;
+  border-top-style: solid;
+}
+
+#Stats{
+  display:inline;
+}
+
+#firstDescription {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#secondDescription {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#thirdDescription {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#coins{
+  list-style-type: none;
+  padding-left: 10%;
+}
+
+#coinAmmount {
+  color: white;
+}
+
+#zero {
+  color: white;
+}
+#plus {
+color: white;
+}
+
+#coins li{
+  display:inline;
+}
+
+#ownedCoins{
+  
+  height: 25px;
+  width: 25px;
+}
+
+.achievments {
+  background-color: whitesmoke;
+  
+}
+#kilometers{
+  padding-left: 30%;
+  color: white;
+}
+
+#todoStats{
+  display:inline;
+}
+
+#coinstoEarn{
+  list-style-type: none;
+  padding-left: 70%;
+}
+
+#coinstoEarn li{
+  display:inline;
+}
+
+#kilometersLeft{
+  padding-left: 85%;
+  color: white;
+}
+
+#avatarImg{
+display:block;
+margin:auto;
+padding:auto;
+height:170px;
+width:170px;
+border-radius: 50%;
+border-style:solid;
+border-width: 5px;
+border-color: #763626;
+}
+.user {
+  margin-top: -50px;
+  margin-bottom: 20px;
+}
+
+.achievments {
+  margin-top: -30px;
+}
+
+#greetings {
+  margin-bottom: 30px;
+  color: darkgreen;
+}
+
+#achievments-title {
+  margin-bottom: 10px;
+  color: darkred;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+/*Medias*/
+@media (max-width: 575.98px) {
+  #kilometers{
+ visibility: hidden;
+}
+
+#kilometersLeft{
+  visibility: hidden;
+}
+#coinstoEarn{
+  padding-left: 65%;
+}
+
+#avatarImg{
+  width:100px;
+  height:100px;
+}
+#search-engine {
+  visibility: hidden;
+  margin-left: -450px;
+}
+#search-engine-mobile {
+  width: 100%;
+  margin-left: 0px;
+  margin-bottom: 60px;
+}
+#brand {
+  margin-right: 0px;
+}
+#hikes {
+  margin-left: 20%;
+}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+ #kilometers{
+     visibility: hidden;
+ }
+
+ #kilometersLeft{
+  visibility: hidden;
+ }
+
+ #avatarImg{
+  width:100px;
+  height:100px;
+  }
+
+ #search-engine {
+  margin-right: 90px;
+  width: 200px;
+}
+#search-engine-mobile {
+  width: 85%;
+  margin-left: 25px;
+}
+ 
+#search-engine-mobile {
+  visibility: hidden;
+}
+#search-engine-input {
+  width: 250px;
+  margin-right: 20px;
+}
+#brand {
+  margin-right: 20px;
+  margin-left: 0px;
+}
+#hikes {
+  margin-left: 1px;
+}
+
+#coinstoEarn{
+  padding-left: 85%;
+}
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+#footer{
+ height:70px;
+ font-size:25px;
+}
+
+#ownedCoins{
+ height: 35px;
+ width: 35px;
+}
+#search-engine {
+  width: 50%;
+}
+#search-engine-mobile {
+  visibility: hidden;
+}
+#search-engine-input {
+  width: 420px;
+  margin-left: 0px;
+  margin-right: 12px;
+}
+#search-engine {
+  margin-left: 0px; 
+  margin-right: 20px;
+}
+#brand {
+ margin-right: -90px;
+}
+#hikes {
+  margin-left: 70px;
+}
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+ #footer{
+     height:70px;
+     font-size:25px;
+ }
+
+ #ownedCoins{
+     height: 35px;
+     width: 35px;
+ }
+
+#search-engine-mobile {
+  visibility: hidden;
+}
+#search-engine-input {
+  width: 620px;
+  margin-left: 0px;
+  margin-right: 1px;
+}
+#search-engine {
+  margin-left: 0px; 
+  margin-right: 0px;
+}
+#brand {
+ margin-right: 10px;
+}
+
+}
+
+
+@media (min-width: 1200px) {
+ #footer{
+     height:70px;
+     font-size:25px;
+ }
+
+ #ownedCoins{
+     height: 35px;
+     width: 35px;
+ }
+
+#search-engine-mobile {
+  visibility: hidden;
+}
+#search-engine {
+  width: 250px;
+  margin-right: 10px;
+}
+#search-engine-input {
+  width: 800px;
+  margin-left: 15x;
+}
+#brand {
+  margin-right: 20px;
+}
+#hikes {
+  margin-left: 590px;
+}
+}
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+transition: -webkit-transform 0.5s ease;
+transition: transform 0.5s ease;
+transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+-webkit-backface-visibility: visible;
+backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+position: relative;
+width: 100%;
+height: 60%;
+margin: 0!important;
+}
+.fixed-wrap {
+clip: rect(0, auto, auto, 0);
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+#fixed {
+background-image: url('img/mac.png');
+position: fixed;
+display: block;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-size: cover;
+background-position: center center;
+-webkit-transform: translateZ(0);
+      transform: translateZ(0);
+will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+padding: 1rem;
+}
