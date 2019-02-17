@@ -65,7 +65,7 @@ class Recommendation(object):
             user = [1000, 250, 10, 10]  # get_users()
         for route, profile in zip(routes, hard_code):
             if not route.profile_vector:
-            route.profile_vector = profile
+                route.profile_vector = profile
         #get_list_routes()
 
         user = Recommendation.normalize(user)
@@ -112,28 +112,28 @@ class Route(object):
         data = (id)
         result = CONNECTION.execute(sql, data)
         r = result.fetchone()
-        route = Route(**r)
+        route = Route(r)
         route_dict = Route.to_json(route)
         return route_dict
 
     @staticmethod
     def get_all() -> list:
-        sql_query = "Select * from route"
+        sql_query = "Select * from routes"
         results = CONNECTION.execute(sql_query)
         r = results.fetchall()
-        routes = [Route(**r for r in result)]
+        routes = [Route(r for r in results)]
         return routes
 
 
     @staticmethod
-    def to_json(route : Route) -> dict:
+    def to_json(route ) -> dict:
         json_route = {
-            'name' : route.name
-            'route' : route.id
-            'from_dest' : route.from_dest
-            'to_dest' : route.to_dest
-            'description' : route.description
-            'difficulty' : route.difficulty
+            'name' : route.name,
+            'route' : route.id,
+            'from_dest' : route.from_dest,
+            'to_dest' : route.to_dest,
+            'description' : route.description,
+            'difficulty' : route.difficulty,
         }
         return json_route
 
