@@ -9,7 +9,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="style-user.css" rel="stylesheet">
+	<link href="../static/style-user.css" rel="stylesheet">
 </head>
 <body>
         <header class = "navbar-expand-md navbar-light sticky-top container-fluid">
@@ -36,24 +36,24 @@
     <div class = "container-fluid padding">
     <div class = "row about text-center">
         <div class = "col-xs-12 col-sm-6 col-md-6 mainUser">
-            <img src = "Images/man.png" width = "200px" class = " user">
+            <img src = "../static/Images/man.png" width = "200px" class = " user">
             <h2 id = "greetings">Welcome again, User!</h2>
         </div>
         <div class = "col-xs-12 col-sm-6 col-md-6 achievments">
-            <h2 id = "achievments-title">Achievments</h2>
+            <h2 id = "achievments-title">Achievements</h2>
             <div class = "container-fluid padding">
             <div class = "row text-center">
             <div class = "col-xs-6 col-sm-6 col-md-4">
-                <img src = "Images/mountains.png" width = "120px">
+                <img src = "../static/Images/mountains.png" width = "120px">
                 <p id = "firstDescription">Hike 3 peaks in one month!</p>
             </div>
             <div class = "col-xs-6 col-sm-6 col-md-4">
-                <img src = "Images/placeholder.png" width = "120px">
+                <img src = "../static/Images/placeholder.png" width = "120px">
                 <p id = "secondDescription">Travel 10 kilometers!</p>
             </div>
             <div class = "col-xs-6 col-sm-6 col-md-4">
-                <img src = "Images/peak.png" width = "120px">
-                <p id = "thirdDescription">Hike a peak bigger than 5 kilometers!</p>
+                <img src = "../static/Images/peak.png" width = "120px">
+                <p id = "thirdDescription">Hike a peak higher than 5 kilometers!</p>
             </div>
             </div>
             </div>
@@ -63,19 +63,19 @@
     <footer class="container-fluid fixed-bottom" id="footer">
             <div class="fixed-bottom" id="Stats">
                 <ul id="coins" class="fixed-bottom">
-                    <li><img src="Images/coins.png" id="ownedCoins"></li>
+                    <li><img src="../static/Images/coins.png" id="ownedCoins"></li>
                     <li id="coinAmmount">0</li>
                 </ul>
                 <p id="kilometers">0km</p>
             </div>
         
             <div class="fixed-bottom" id="avatar">
-                <img src="Images/worldwide.png" id="avatarImg" href = "index.html">
+                <a href = "index.html"><img src="../static/Images/worldwide.png" id="avatarImg"></a>
             </div>
         
             <div class="fixed-bottom" id="todoStats">
                 <ul id="coinstoEarn" class="fixed-bottom">
-                    <li id = "plus">+<img src="Images/coins.png" id="ownedCoins"></li>
+                    <li id = "plus">+<img src="../static/Images/coins.png" id="ownedCoins"></li>
                     <li id = "zero">0</li>
                 </ul>
                 <p id="kilometersLeft">0km left</p>

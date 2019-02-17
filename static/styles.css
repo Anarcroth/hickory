@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .main {
@@ -32,6 +33,34 @@
   width: 540px;
 }
 
+#recommendations-title {
+  color: darkgreen;
+  font-size: 32px; 
+}
+
+
+.bottom-left {
+  border-left: 5px solid #763626;
+  border-top: 5px solid #763626;
+  border-right: 5px solid #763626;
+}
+
+ul {
+  text-decoration: none;
+}
+
+#hidden-1 {
+  visibility: hidden;
+}
+
+#rec li {
+  list-style-type: none;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+
+}
+
 #hikes {
   float: right;
   margin-right: 20px;
@@ -57,9 +86,24 @@
   font-weight: bold;
 }
 
+.bottom-left {
+  margin-top: 350px;
+  padding-bottom: 90px;
+  background-color: #8cccec;
+  
+}
+
 #search-engine-input {
   width: 600px;
   margin-right: 120px;
+}
+
+li {
+  text-decoration: none;
+}
+
+#hidden-2 {
+  visibility: hidden;
 }
 
 header {
