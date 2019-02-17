@@ -57,6 +57,7 @@ class Recommendation(object):
             #print(temp_dist)
         return sorted(routes, key=lambda r: r.approximation)
 
+
     @staticmethod
     def search_nearest_route(user : list = None, routes : list = None) -> list:
         if not user:
@@ -87,24 +88,42 @@ class User(object):
 
 
 class Route(object):
-    def __init__(self, id : int = None, profile_vector : list = None):
+    def __init__(self, id : int = None, name : str = None, from_dest : str = None, to_dest : str = None, description : str = None, difficulty : str = None, profile_vector : list = None):
         self.id = id
+        self.route = id
+        self.name = name
+        self.from_dest = from_dest
+        self.to_dest = to_dest
+        self.description = description
+        self.difficulty = difficulty
         self.approximation = 0.0
-        if not profile_vector:
-            self.profile_vector = [1, 2, 3, 4]
-        else:
-            self.profile_vector = profile_vector
-    @staticmethod
-    def get( id : int):
-        sql = "Select * from routes where route_id =%s;"
+        self.profile_vector = profile_vector
+
+    def get(self, id : int):
+        sql = "Select * from settings;"
         data = (id)
         result = CONNECTION.execute(sql, data)
         print(result)
 
     @staticmethod
-    def get_all():
-        return []
+    def get_all() -> list:
+        sql_query = "Select * from route"
+        results = CONNECTION.fetch_all(sql_query)
+        routes = [Route(**r for r in result)]
+        return routes
 
+
+    @staticmethod
+    def to_json(route : Route) -> dict:
+        json_route = {
+            'name' : route.name
+            'route' : route.id
+            'from_dest' : route.from_dest
+            'to_dest' : route.to_dest
+            'description' : route.description
+            'difficulty' : route.difficulty
+        }
+        return json_route
 
 class UserSetting(object):
     @staticmethod

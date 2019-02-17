@@ -16,10 +16,20 @@ def index():
     return render_template('index.html')
 
 
-@app.route("/recommendations", methods=["POST"])
-def recommendations():
-    user_id = request['user_id']
-    recs = controllers.get_recommendations(user_id)
+@app.route("/user")
+def user():
+    return render_template('user.html')
+
+
+@app.route("/route")
+def route():
+    return render_template('route.html')
+
+
+@app.route("/recommendations/<int:uid>")
+def recommendations(uid: int):
+    recs = controllers.get_recommendations(uid)
+    recs = [r.to_json() for r in recs]
     return json.dumps(recs)
 
 
