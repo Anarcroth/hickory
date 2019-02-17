@@ -1,5 +1,4 @@
 from sqlalchemy import create_engine
-#import recommendation
 import psycopg2
 import re
 import os
@@ -16,6 +15,7 @@ def get_connection():
     POSTGRES_DB = get_env_variable("POSTGRES_DB")
 
     DB_URL = 'postgresql+psycopg2://{user}:{pw}@{url}/{db}'.format(user=POSTGRES_USER,pw=POSTGRES_PW,url=POSTGRES_URL,db=POSTGRES_DB)
+    engine = create_engine(DB_URL)
     conn = engine.connect()
     return conn
 
