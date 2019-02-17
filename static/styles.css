@@ -133,6 +133,87 @@ border-width: 5px;
 border-color: #763626;
 }
 
+#routePhoto{
+  float:left;
+  height:300px;
+  width:550px;
+  border-bottom-style:solid;
+  border-bottom-width: 5px;
+  border-bottom-color: #763626;
+  border-right-style:solid;
+  border-right-width: 5px;
+  border-right-color: #763626;
+}
+
+#title1{
+  font-size:35px;
+  padding-left:50%; 
+}
+
+#DifnDic li{
+display:inline;
+}
+#distance{
+  padding-left:40%;
+}
+
+#distance li{
+  display:inline;
+}
+
+#distancePhoto{
+  height: 40px;
+  width: 40px;
+}
+
+#distanceNum{
+  font-size: 25px
+}
+
+#difficulty{
+  padding-left:80%;
+}
+
+#difficultyPhoto {
+  margin-left: 65%;
+}
+
+#difficulty li{
+  display:inline;
+}
+
+#difficultyPhoto{
+  height: 40px;
+  width: 40px;
+}
+
+#difficultyNum{
+  font-size: 25px
+}
+
+#routeInfo{
+  padding-left:00%;
+  font-style: Ariel;
+  font-size: 15px;
+}
+
+#stamps li{
+display:inline;
+}
+
+#awards{
+  padding-left:40%;
+}
+
+#stampAward{
+  width:100px;
+  height:100px;
+}
+
+#space{
+  height:150px;
+}
+
 html, body {
     height: 92%;
     margin: 0;
@@ -142,6 +223,7 @@ html, body {
 #map {
     height: 100%;
 }
+
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
